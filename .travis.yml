@@ -1,0 +1,15 @@
+language: python
+python: 3.6
+install: pip install -U tox
+script: tox
+deploy:
+  provider: releases
+  api_key:
+    secure: a+lABZp7HsoRyRDiXVd+QjHTqIvpf1TSQW58a0ILY/JE73uwjg+Zd6U1O5/fmUDKVFV5cO4WM93ZWKjLRcOtBK9iZCQlsn+3IwSgoqvLejks2tBXCKyX4CTTU8n6wkS7R+2Wyy5W+ZI+mbrnX1SbQSxxnvKQ3Ph+sHQD136g8asHxjfArliVBBQ2pZv5KeMv66KSD63JMFCRJOkovtiBHzXb4Juz924Xjs7Qiiri0CB9rP1tZxsp1feG0HO+TZSSHph4TetHZJER/vvIh2MKmKfJSnvDvIk8jier6oTrpCeozWTdPV4q+ypcgmX6OlQTy8YRR7e3XkFfe0V+KmiUY/aANgScW5zCffxMoGGXoz3aPKZoiE+hH5XUk4yjn7HPunB2Mf+Fc+tBYqZLFsl/kTLpEWLyIpiqsEeIQVRW5Tb6lpU1a4XHBWZQntHEAsSfPCm8lSogikgztBJ3NrOc5JkAFE5vPgM2Q6DeH7iRiNukFSmpjHpVXm3Y+tfPT4pfR3nx7v7bxf+PHXKOZ0uLkPygcY94IZuGdhXj4IChHkb2vLogghxvlOCdHvPi1ubQLFgRGTZ33ZtfHdtmVsMIrPllfJQx+QClFre3EhmunWgSx3neHHQY+itvL1IO+7Q2ErEvT0deCGB4fkjgCMw6OcSg0o8dcFB4WznnZA1VtbU=
+  file_glob: true
+  file: dist/tocsin-*
+  skip_cleanup: true
+  draft: true
+  on:
+    repo: kmray/tocsin
+    tags: true
