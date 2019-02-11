@@ -13,9 +13,15 @@ setup(
     cmdclass=versioneer.get_cmdclass(),
     author="Keith Ray",
     author_email="keith@nullify.org",
+    url="https://github.com/kmray/tocsin",
     packages=find_packages(exclude=['tests']),
     long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     classifiers=[
-        "Development Status :: 1 - Planning"
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: Apache Software License",
+        "Topic :: Home Automation"
     ],
+    install_requires=[]
 )
